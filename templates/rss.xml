@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0">
+<channel>
+  <title>Lauri's blog</title>
+  <description>Lauri's blog about open-source and ranting</description>
+  <link>{{ base }}</link>
+  <lastBuildDate>{{ now }}</lastBuildDate>
+  <pubDate>{{ now }}</pubDate>
+  <ttl>1800</ttl>
+  {% for post in posts %}
+  <item>
+    <title>{{ post.title }}</title>
+    <description>{{ post.first_paragraph() }}</description>
+    <link>{{ base }}{{ post.url }}</link>
+    <pubDate>{{ post.published.strftime("%a, %d %b %Y %T %Z") }}</pubDate>
+  </item>
+  {% endfor %}
+</channel>
+</rss>

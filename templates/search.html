@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Lauri's blog | Search</title>
+    {{ super() }}
+{% endblock %}
+
+{% block sidebar %}
+                <section class="tag_cloud">
+                    <h1>Tag cloud</h1>
+                    {% for tag, weight in site.tag_cloud() %}
+                        <a href="/search.html#{{ tag }}" style="font-size: {{ weight }}%"/>{{ tag }}</a>
+                    {% endfor %}
+                </section>
+                
+                {{ super() }}
+{% endblock %}
+
+{% block body %}
+
+        <article class="document archive search">
+            <h1>Search results</h1>
+            <ul>
+            {% for resource in resources %}
+                <li class="resource" data-keywords="|{% for keyword in resource.keywords | sort %}{{ keyword }}|{% endfor %}">
+                    <a href="{{ resource.url }}">
+                        <span class="title">{{ resource.title }}</span>
+                        <span class="day">{{ resource.revised.strftime("%d. %b") }}</span>
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
+        </article>
+
+    
+{% endblock %}

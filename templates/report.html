@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Lauri's blog | Build report</title>
+    {{ super() }}
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}
+
+
+{% block body %}
+        <article class="report">
+            <h1>Build report</h1>
+            <ul>
+            {% for resource, message, severity %}
+                <li class="message {{ severity }}">
+                    <a href="{{ resource.url }}">
+                        {{ message }}
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
+        </article>
+{% endblock %}

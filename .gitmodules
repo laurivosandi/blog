@@ -1,0 +1,6 @@
+[submodule "pages/arduino"]
+	path = pages/arduino
+	url = git://github.com/v6sa/arduino-book.git
+[submodule "pages/lan"]
+	path = pages/lan
+	url = git://github.com/v6sa/lan-book.git

@@ -1,0 +1,300 @@
+/**
+ * General style
+ */
+svg.pygal-chart {
+    margin: 1em auto;
+}
+ 
+svg.pygal-chart .background {
+    fill: none;
+    background-color: none;
+}
+ 
+.sponsors img {
+    
+    display: block;
+    margin: 10px auto 20px;
+    
+}
+/**
+ * Search box is progressively added
+ */
+
+#search {
+    display: inline;
+
+    background-position: 4px 0px;
+    height: 32px;
+    padding: 2px 2px 2px 38px;
+    margin: 0;
+    border-radius: 99px;
+    -moz-border-radius: 99px;
+    -webkit-border-radius: 99px;
+    font-size: 5mm;
+}
+ 
+body,
+input,
+a,
+td {
+    font-size: 6mm;
+}
+
+body,
+input,
+a {
+    font-family: "Cabin Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: square;
+}
+
+body {
+    background: #fff;
+    color: black;
+}
+
+header h,
+h1, h2, h3 { 
+    font-family: "Bitter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 120%;
+    font-weight: bolder;
+}
+
+/**
+ * General layout
+ */
+ 
+#breadcrumbs {
+    display: none;
+}
+
+#disqus_thread {
+    margin: 4em 0 0 0;
+}
+
+#content h1 {
+    margin: 0;
+    padding: 1em 0 0;
+}
+
+aside h1 {
+    margin: 0;
+    padding: 1em 0;
+}
+
+header,
+#navigation div,
+#container {
+    max-width: 60em;
+    padding: 0 5pt;
+}
+
+header {
+    margin: 2em auto 0;
+}
+
+header h {
+    margin-left: 20px;
+    font-size: 40px;
+    position: relative;
+    top: -16px;
+
+}
+
+
+/**
+ * Links
+ */
+
+a {
+    color: #800;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+a:hover {
+    color: #a00;
+    border-bottom: 1px dotted #bbb;
+}
+
+aside a {
+    border: none;
+}
+
+aside a:hover {
+    border: none;
+}
+
+
+/**
+ * Sidebar
+ */
+.icon {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#sidebar {
+    float: right;
+    width: 300px;
+    display: none;
+    margin: 0 0 1em 0;
+    border-left: 1px dotted #ccc;
+}
+
+#sidebar section {
+    padding: 0 10px 1em 1em;
+    border-bottom: 1px dotted #ccc;
+    margin: 0;
+}
+
+#location {
+    display: none;
+}
+
+.keywords {
+    text-align: center;
+}
+
+.tag_cloud {
+    text-align: justify;
+}
+
+.tag_cloud a {
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+/**
+ * Tags on sidepanel and on the bottom
+ */
+ 
+#content .tags,
+#content .related {
+    border-top: 1px dotted #ccc;
+    padding-top: 1em;
+    margin-top: 1em;
+}
+
+#content .tags a,
+#content .related a {
+    border: none;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/**
+ * Navigation
+ */
+
+#navigation {
+    margin: 2em 0 1em 0;
+    background: #444;
+    font-family: "Cabin Condensed";
+    padding: 0.5em 0;
+
+}
+
+#navigation div {
+    margin: 0 auto;
+}
+
+#navigation div a {
+    display: block;
+    font-size: 120%;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    margin-right: 1em;
+}
+
+#navigation div a:hover {
+    text-shadow: 0px 0px 3px #000;
+    text-decoration: none;
+    border: none;
+}
+
+
+#container {
+    margin: 0 auto;
+}
+
+
+#donate {
+    text-align: center;
+    margin: 0 auto;
+    width: 147px;
+}
+
+@media print {
+    nav {
+        display: none;
+    }
+    
+    html,
+    body,
+    article {
+        background: none;
+        margin: auto;
+        padding: 0;
+    }
+    
+    .document {
+        padding: auto;
+        border: none;
+        font-size: 80%;
+        font-family: 'Gentium';
+    }
+    
+    #pagination {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 40em) {
+    /* Enhancements for desktop */
+    
+    #navigation div a {
+        display: inline;
+    }
+    
+    #sidebar {
+        display: block;
+    }
+    
+    .document {
+        margin-right: 300px;
+        padding-right: 1em;
+    }
+    
+    #content .tags,
+    #content .related {
+        display: none;
+    }
+
+    #search {
+        float: right;
+        width: 16em;
+    }
+}
+
+footer {
+    color: rgba(0,0,0,0.5);
+    text-shadow: 0px 0px 3px #fff;
+    text-align: center;
+    margin-bottom: 2em;
+}
+

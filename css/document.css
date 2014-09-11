@@ -1,0 +1,175 @@
+/**
+ * Document formatting
+ */
+ 
+.document {
+    max-width: 100%;
+    overflow: hidden; /* Forget doing text-overflow: ellipsis */
+}
+
+.document pre.code {
+    font-family: 'Ubuntu Mono', monospace, courier;
+    line-height: 100%;
+    margin: 1.5em 0;
+    padding: 8px;
+    border: 1pt solid #ccc;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.document .system-message {
+    display: none;
+}
+
+.document .center {
+    text-align: center;
+}
+
+.document img,
+.document object[type="image/svg+xml"],
+.document svg {
+    display: block;
+    margin: 1em;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.document .figure img,
+.document .figure object[type="image/svg+xml"],
+.document .figure svg {
+    margin: 1em auto;
+}
+
+.document .figure .caption {
+    font-size: 80%;
+    font-style: italic;
+    text-align: center;
+}
+
+.document .section {
+    page-break-after: always;
+}
+
+.document img.align-right {
+    clear: right;
+    float: right;
+}
+
+.document .published {
+    font-size: 120%;
+    margin: 1em 0 0 0;
+    float: right;
+    color: #aaa;
+}
+
+/**
+ * Lists
+ */
+.document p,
+.document ul,
+.document ol,
+.document ol li,
+.document ul li {
+    max-width: 100%;
+    line-height: 150%;
+}
+
+.document p {
+    text-align: justify;
+}
+
+table.docutils {
+    border-collapse: collapse;
+    border: 1px solid #888;
+    -webkit-box-shadow: 0 0 15px -5px black;
+    -moz-box-shadow: 0 0 15px -5px black;
+    box-shadow: 0 0 15px -5px black;
+}
+
+/**
+ * Footnotes
+ */
+.footnote-reference {
+    vertical-align: super;
+    text-decoration: none;
+}
+
+table.docutils.footnote {
+    table-layout: fixed;
+    width: 100%;
+}
+
+table.docutils.footnote td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+table.docutils.footnote td.label {
+    width: 4em;
+    text-overflow: clip;
+    overflow: hidden;
+}
+
+table.docutils.footnote td,
+table.docutils.footnote td a {
+    color: #ccc;
+    text-decoration: none;
+    border: none;
+}
+
+table.docutils.footnote td:hover a {
+    color: #a00;
+    border-bottom: 1px dotted #bbb;
+
+}
+
+table.docutils.footnote {
+    border: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+/**
+ * Imporant box
+ */
+.document .important {
+    padding: 0 1em 0 72px;
+    background-position: 15px 0px;
+    background-size: 48px;
+    background-repeat: no-repeat;
+    background-image: url("../img/iconmonstr-warning-6-icon.svg");
+    min-height: 48px;
+}
+
+.document .important p {
+    position: relative;
+    top: 8px;
+}
+
+.document .important .admonition-title {
+    display: none;
+}
+
+/**
+ * Logos on about me page
+ */
+ 
+
+.document p.logos {
+    text-align: center;
+}
+
+.document p.logos a {
+    border: none;
+    text-decoration: none;
+
+}
+
+.document p.logos a img {
+    display: inline;
+    vertical-align: middle;
+}

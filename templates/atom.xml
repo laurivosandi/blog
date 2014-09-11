@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Lauri's blog</title>
+  <subtitle>Lauri's blog about open-source and ranting</subtitle>
+  <link href="{{ base }}"/>
+  <updated>{{ now.strftime("%Y-%m-%dT%H:%M:%SZ") }}</updated>
+  {% for post in posts %}
+  <entry>
+    <title>{{ post.title }}</title>
+    <summary>{{ post.first_paragraph() }}</summary>
+    <link href="{{ base }}{{ post.url }}"/>
+    <updated>{{ post.published.strftime("%Y-%m-%dT%H:%M:%SZ") }}</updated>
+    {% for name, email in post.authors %}
+    <author>
+      <name>{{ name }}</name>
+      <email>{{ email }}</email>
+    </author>
+    {% endfor %}
+  </entry>
+  {% endfor %}
+</feed>

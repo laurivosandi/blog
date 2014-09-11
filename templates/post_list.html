@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Lauri's blog | Archive</title>
+    {{ super() }}
+{% endblock %}
+
+{% block sidebar %}
+                <section class="tag_cloud">
+                    <h1>Tag cloud</h1>
+                    {% for tag, weight in site.tag_cloud() %}
+                        <a href="search.html#{{ tag }}" style="font-size: {{ weight }}%"/>{{ tag }}</a>
+                    {% endfor %}
+                </section>
+
+                <section class="donate">
+                    <h1>Donate</h1>
+                    
+                    <p>As a freelancer I appreciate every penny.
+                    If you find my how-tos useful, consider becoming a donor:</p>
+
+                    <form id="donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                    ">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="Donate">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                </section>
+                
+                {{ super() }}
+{% endblock %}
+
+
+{% block body %}
+<!--    <div id="search">
+        <h1>Narrow down</h1>
+        <input type="search" placeholder="Linux, OpenVPN, Strongswan, etc." class="icon search"/>
+    </div> -->
+
+    {% for group in posts | groupby("published.year") | reverse %}
+        <article class="document archive">
+            <h1>{{ group.grouper }}</h1>
+            <ul>
+            {% for post in group.list | reverse %}
+                <li class="post" data-keywords="|{% for keyword in post.keywords | sort %}{{ keyword }}|{% endfor %}">
+                    <a href="{{ post.url }}">
+                        <span class="title">{{ post.title }}</span>
+                        <span class="day">{{ post.published.strftime("%d. %b") }}</span>
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
+        </article>
+    {% endfor %}
+    
+{% endblock %}

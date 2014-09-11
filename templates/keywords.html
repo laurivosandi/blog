@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Keywords</title>
+    {{ super() }}
+{% endblock %}
+
+{% block body %}
+    <article>
+  
+        <div class="keywords">
+            {% for keyword in keywords %}
+                <a class="icon keyword" href="#">{{ keyword }}</a>
+            {% endfor %}
+        </div>
+    </article>
+{% endblock %}

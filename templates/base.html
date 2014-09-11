@@ -1,0 +1,68 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="language" content="{{ language }}"/>
+    <meta name="copyright" content="Koodur OÜ"/>
+    {% block head %}
+    {% if post %}
+    {% if post.tags %}<meta name="tags" content="{% for tag in post.tags %}{{ tag }}{% if not loop.last %},{% endif%}{% endfor %}"/>{% endif %}
+    {% if post.keywords %}<meta name="keywords" content="{% for keyword in post.keywords %}{{ keyword }}{% if not loop.last %},{% endif%}{% endfor %}"/>{% endif %}
+    {% endif %}
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <link type="application/atom+xml" rel="alternate" href="{{ base }}/atom.xml"/>
+    <link type="application/rss+xml" rel="alternate" href="{{ base }}/rss.xml"/>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Bitter|Cabin|Cabin+Condensed|Ubuntu|Ubuntu+Mono"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://lauri.vosandi.com/punycode.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+<!--    <link type="text/css" rel="stylesheet" href="http://fritzing.org/static/fonts/ocr-a-tribute/ocr-a-tribute.css"/> -->
+    {% for relpath in javascript %}<script type="text/javascript" src="{{ relpath }}"></script>
+    {% endfor %}
+    {% for relpath in stylesheets %}<link type="text/css" rel="stylesheet" href="{{ relpath }}"/>
+    {% endfor %}
+    {% endblock %}
+    
+</head>
+<body>
+
+    <nav id="breadcrumbs"></nav>
+    <header>
+        <img id="logo" src="/img/logo.svg"/>
+        <h>Lauri's blog</h>
+    </header>
+    <nav id="navigation">
+        <div>
+            <a href="/">Home</a>
+<!--            <a href="/sponsors.html">Sponsors</a>-->
+            <a href="/posts.html" title="Blog posts">Posts</a>
+            <a href="/training.html" title="Training and course materials">Training</a>
+            <a href="/products.html" title="Products and services">Products</a>
+            <a href="/about.html" title="About me">About</a>
+            <a href="/atom.xml" title="Atom feed"><img src="/img/iconmonstr-rss-icon-white.svg" style="width:7mm;height:7mm;" alt="Atom"/></a>
+            <input id="search" type="search" placeholder="Linux, OpenVPN, Strongswan, etc." class="icon search"/>
+        </div>
+    </nav>
+    <div id="container">
+        <aside id="sidebar">
+            {% block sidebar %}
+            {% endblock %}
+        </aside>        
+        <div id="content">
+            {% block body %}
+
+            {% endblock %}
+       </div>
+        
+    </div>
+    <!--
+    <footer>
+        Powered by homemade code,
+        <a href="http://iconmonstr.com/">iconmonstr</a> icons,
+        <a href="http://fritzing.org/home/">Fritzing</a> schematics,
+        <a href="http://dia-installer.de/shapes/cisconetwork/">Dia</a> network diagrams,
+        <a href="http://www.inkscape.org/">Inkscape</a> graphics.
+    </footer>
+    -->
+</body>
+</html>

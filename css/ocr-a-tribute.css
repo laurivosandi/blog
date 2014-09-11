@@ -1,0 +1,33 @@
+@font-face {
+	font-family: 'OCR A Tribute';
+	src: url('../fonts/ocr-a-tribute-light.eot');
+	src: url('../fonts/ocr-a-tribute-light?#iefix') format('embedded-opentype'),
+		 url('../fonts/ocr-a-tribute-light.woff') format('woff'),
+		 url('../fonts/ocr-a-tribute-light.ttf') format('truetype'),
+		 url('../fonts/ocr-a-tribute-light.svg#OCRATributeW01-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OCR A Tribute';
+	src: url('../fonts/ocr-a-tribute-regular.eot');
+	src: url('../fonts/ocr-a-tribute-regular?#iefix') format('embedded-opentype'),
+		 url('../fonts/ocr-a-tribute-regular.woff') format('woff'),
+		 url('../fonts/ocr-a-tribute-regular.ttf') format('truetype'),
+		 url('../fonts/ocr-a-tribute-regular.svg#OCRATributeW01-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OCR A Tribute';
+	src: url('../fonts/ocr-a-tribute-bold.eot');
+	src: url('../fonts/ocr-a-tribute-bold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/ocr-a-tribute-bold.woff') format('woff'),
+		 url('../fonts/ocr-a-tribute-bold.ttf') format('truetype'),
+		 url('../fonts/ocr-a-tribute-bold.svg#OCRATributeW01-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
