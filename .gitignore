@@ -1,4 +1,5 @@
 *~
 whitelist.urls
 blacklist.urls
+fonts/
 __pycache__

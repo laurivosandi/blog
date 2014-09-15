@@ -14,7 +14,7 @@ import mimetypes
 import configparser
 import hashlib
 import urllib
-from urllib.parse import urlparse
+from urllib.parse import urlparse, unquote
 from collections import Counter
 from datetime import datetime
 from docutils.core import publish_parts
@@ -262,7 +262,7 @@ class Site(object):
                     o = urlparse(url)
                     
                     if o.netloc:
-                        cached_relpath = os.path.join(o.netloc, o.path[1:])
+                        cached_relpath = os.path.join(o.netloc, unquote(o.path[1:]))
                     else:
                         basename, extension = os.path.splitext(o.path)
                         assert not o.path.startswith("/")

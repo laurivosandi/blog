@@ -12,6 +12,7 @@ The obvious benefit is that software is managed centrally.
 
 .. [#diskless-debian] http://www.iram.fr/~blanchet/tutorials/read-only_diskless_debian7.pdf
 
+
 Setting up NFS server
 ---------------------
 
@@ -39,6 +40,7 @@ NFS services have to be reloaded of course:
 .. code:: bash
 
     sudo /etc/init.d/nfs-kernel-server reload
+
     
 Setting up DHCP server
 ----------------------
@@ -82,6 +84,8 @@ Chrooting
 
 From now on we can assume all commands will take place inside /var/lib/cubietruck,
 before entering the chroot you probably want to mount /proc and /dev/pts:
+
+.. code:: bash
 
     mkdir -p /var/lib/cubietruck/dev/pts
     mount --bind /dev/pts /var/lib/cubietruck/dev/pts
@@ -231,31 +235,31 @@ To /etc/X11/xorg.conf:
 
 .. code::
 
-Section "Screen"
-    Identifier  "VGA-0"
-    Device      "/dev/fb0"
-    Monitor     "LG"
-EndSection
+    Section "Screen"
+        Identifier  "VGA-0"
+        Device      "/dev/fb0"
+        Monitor     "LG"
+    EndSection
 
-Section "Screen"
-    Identifier  "HDMI-0"
-    Device      "/dev/fb1"
-    Monitor     "LG"
-EndSection
+    Section "Screen"
+        Identifier  "HDMI-0"
+        Device      "/dev/fb1"
+        Monitor     "LG"
+    EndSection
 
-Section "Device"
-    Identifier  "/dev/fb0"
-    Driver      "fbturbo"
-    Option      "fbdev" "/dev/fb0"
-    Option      "SwapBuffersWait" "true"
-EndSection
+    Section "Device"
+        Identifier  "/dev/fb0"
+        Driver      "fbturbo"
+        Option      "fbdev" "/dev/fb0"
+        Option      "SwapBuffersWait" "true"
+    EndSection
 
-Section "Device"
-    Identifier  "/dev/fb1"
-    Driver      "fbturbo"
-    Option      "fbdev" "/dev/fb1"
-    Option      "SwapBuffersWait" "true"
-EndSection
+    Section "Device"
+        Identifier  "/dev/fb1"
+        Driver      "fbturbo"
+        Option      "fbdev" "/dev/fb1"
+        Option      "SwapBuffersWait" "true"
+    EndSection
 
 To install Adobe Flash 11.5 [#flash]_:
 

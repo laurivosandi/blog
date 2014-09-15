@@ -8,7 +8,7 @@ Dependencies:
 .. code:: bash
 
     sudo apt-get install python3-jinja2 python3-pip
-    sudo pip-3.2 install langid jinja2 docutils urllib2 pygal
+    sudo pip-3.2 install langid jinja2 docutils pygal
 
 I am not sure whether OCR A font used by Fritzing schematics is redistributable.
 Directly linking CSS from Fritzing website often lags so you probably want to download those.
@@ -16,6 +16,7 @@ I think it is in Fritzing's best interests aswell if their schematics look the s
 
 .. code:: bash
 
+    mkdir fonts/
     wget http://fritzing.org/static/fonts/ocr-a-tribute/ocr-a-tribute-bold.eot     -O fonts/ocr-a-tribute-bold.eot
     wget http://fritzing.org/static/fonts/ocr-a-tribute/ocr-a-tribute-bold.ttf     -O fonts/ocr-a-tribute-bold.ttf
     wget http://fritzing.org/static/fonts/ocr-a-tribute/ocr-a-tribute-bold.woff    -O fonts/ocr-a-tribute-bold.woff

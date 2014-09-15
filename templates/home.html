@@ -4,7 +4,6 @@
                 <section class="tag_cloud">
                     <h1>Tag cloud</h1>
                     {% for tag, weight in site.tag_cloud() %}
-                        <a href="search.html#{{ tag }}" style="font-size: {{ weight }}%"/>{{ tag }}</a>
-                    {% endfor %}
+                        <a href="/search.html#{{ tag }}" style="font-size: {{ weight|int }}%"/>{{ tag }}</a>{% endfor %}
                 </section>
 {% endblock %}
