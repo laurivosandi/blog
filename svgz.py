@@ -63,6 +63,8 @@ def parse(source):
     # Make SVG-s scalable
     if "viewBox" not in root.attrib and width and height:
         root.attrib["viewBox"] = "%s %s %s %s" % (left, top, width, height)
+
+    root.attrib["preserveAspectRatio"] = "xMidYMid meet"
         
     PREFIX = "{http://www.w3.org/2000/svg}"
     # Purge unknown attributes
@@ -77,7 +79,10 @@ def parse(source):
             # Expand CSS attributes for Inkscape, dafuq guys?!
             style = j.attrib.pop("style", "")
             if style:
+
                 for i in style.split(";"):
+                    if not i:
+                        continue
                     key, value = i.split(":")
                     if key.startswith("-"):
                         continue
@@ -94,13 +99,12 @@ def parse(source):
             # Fix font family in Fritzing schematics, note that renaming is not enough
             # the real problem was the quotation!
             if fix_fritzing:
-                if j.attrib.get("font-family", None) in ("OCR A Tribute", "'OCRA'", "'OCRAStd'", "OCRA", "'DroidSans'"): # dafuq are you doing guys at Potsdam?!
+                if j.attrib.get("font-family", None) in ("OCR A Tribute", "'OCRA'", "'OCRAStd'", "OCRA", "'DroidSans'", "Bitstream Vera Sans"): # dafuq are you doing guys at Potsdam?!
                      j.attrib["font-family"] = "OCR A Tribute"
                      
             # Consistency!
-            if fix_dia or fix_inkscape:
-                if j.attrib.get("font-family", None) in ("sans", "Sans", "Bitstream Vera Sans"):
-                     j.attrib["font-family"] = "Cabin Condensed"
+            if j.attrib.get("font-family", None) in ("sans", "sans-serif", "Sans", "Bitstream Vera Sans"):
+                 j.attrib["font-family"] = "Cabin Condensed"
 
 
     return tree

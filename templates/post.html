@@ -1,11 +1,8 @@
 {% extends 'page.html' %}
 
 {% block head %}
-    <title>Lauri's blog | {{ post.title }}</title>
     {% for name, email in post.authors %}
     <meta name="author" content="{{ name }}, {{email}}"/>{% endfor %}
-    {% if post.published %}
-    <meta name="published" content="{{ post.published.date() }}"/>{% endif %}
     {{ super() }}
 {% endblock %}
 
@@ -18,7 +15,7 @@
                     {% for author, email in post.authors %}
                         <a class="icon person" href="mailto:{{ email }}" title="Authored by {{ author }}">{{ author }}</a>
                     {% endfor %}
-                    {% if post.published %}
+                    {% if post.published and post.word_count >= 240 %}
                         <a class="icon time" title="Approximately {{ post.word_count }} words">{{ post.word_count // 240 }} minute read</a>
                     {% endif %}
                 </section>
@@ -27,7 +24,7 @@
                 <section class="related">
                     <h1>Related posts</h1> 
                     {% for resource, count in related_posts %}
-                        <a title="{{ resource }}" class="icon post" href="{{ resource.url }}"/>{{ resource }}</a>
+                        <a title="{{ resource }}" class="icon post" href="{{ resource.url }}">{{ resource }}</a>
                     {% endfor %}
                 </section>
                 {% endif %}
@@ -36,7 +33,7 @@
                 <section class="tags">
                     <h1>Tags</h1>
                     {% for tag in post.tags %}
-                        <a class="icon tag" href="/search.html#{{ tag }}">{{ tag }}</a>
+                        <a class="icon tag" href="/search.html#{{ tag|urlencode }}">{{ tag }}</a>
                     {% endfor %}
                 </section>
                 {% endif %}
@@ -49,7 +46,7 @@
         {% if related_posts %}
             <section class="related">
                 {% for resource, count in related_posts %}
-                    <a title="{{ resource }}" class="icon post" href="{{ resource.url }}"/>{{ resource }}</a>
+                    <a title="{{ resource }}" class="icon post" href="{{ resource.url }}">{{ resource }}</a>
                 {% endfor %}
             </section>
         {% endif %}
@@ -57,7 +54,7 @@
         {% if post.tags %}
             <section class="tags">
                 {% for tag in post.tags %}
-                    <a class="icon tag" href="/search.html#{{ tag }}">{{ tag }}</a>
+                    <a class="icon tag" href="/search.html#{{ tag|urlencode }}">{{ tag }}</a>
                 {% endfor %}
             </section>
         {% endif %}

@@ -75,7 +75,7 @@ QEMU compatibility layer:
 
 .. code:: bash
 
-    sudo debootstrap --foreign --arch=armhf jessie /var/lib/cubietruck
+    sudo debootstrap --foreign --arch=armhf testing /var/lib/cubietruck
     sudo cp /usr/bin/qemu*-arm-static /var/lib/cubietruck/usr/bin/
     sudo chroot /var/lib/cubietruck /debootstrap/debootstrap --second-stage
 
@@ -194,8 +194,8 @@ To get Bluetooth, WiFi and CedarX working fetch kernel modules:
 
 .. code:: bash
 
-    wget http://cdimage.koodur.com/cubietruck-kernel-mods.tar
-    tar xvf cubietruck-kernel-mods.tar -C /lib/
+    wget http://lauri.vosandi.com/ct/mod.tar
+    tar xvf mod.tar -C /lib/
     depmod  -a 3.4.98-sun7i+
 
 Define modules to be loaded during boot at /etc/modules:

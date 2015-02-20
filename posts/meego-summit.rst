@@ -1,4 +1,3 @@
-.. title: MeeGo Summit
 .. date: 2011-04-17
 .. author: Lauri Võsandi <lauri.vosandi@gmail.com>
 

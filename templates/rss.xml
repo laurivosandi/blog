@@ -11,6 +11,11 @@
   <item>
     <title>{{ post.title }}</title>
     <description>{{ post.first_paragraph() }}</description>
+    <content>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        {{ post.render() }}
+      </div>
+    </content>
     <link>{{ base }}{{ post.url }}</link>
     <pubDate>{{ post.published.strftime("%a, %d %b %Y %T %Z") }}</pubDate>
   </item>

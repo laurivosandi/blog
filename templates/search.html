@@ -9,7 +9,7 @@
                 <section class="tag_cloud">
                     <h1>Tag cloud</h1>
                     {% for tag, weight in site.tag_cloud() %}
-                        <a href="/search.html#{{ tag }}" style="font-size: {{ weight|int }}%"/>{{ tag }}</a>{% endfor %}
+                        <a href="/search.html#{{ tag | urlencode }}" style="font-size: {{ weight|int }}%">{{ tag }}</a>{% endfor %}
                 </section>
                 
                 {{ super() }}
@@ -22,9 +22,16 @@
             <ul>
             {% for resource in resources %}
                 <li class="resource" data-keywords="|{% for keyword in resource.keywords | sort %}{{ keyword }}|{% endfor %}">
-                    <a href="{{ resource.url }}">
+                    <a href="{{ resource.url }}" title="Revised: {{ resource.revised }}{% if resource.published %}, published: {{ resource.published }}{% endif %}" >
                         <span class="title">{{ resource.title }}</span>
-                        <span class="day">{{ resource.revised.strftime("%d. %b") }}</span>
+                        <span class="day">
+                            {% if resource.published %}
+                                {{ resource.published.strftime("%d. %b '%y") }}
+                            {% else %}
+                                {{ resource.revised.strftime("%d. %b '%y") }}
+                            {% endif %}
+                        </span>
+
                     </a>
                 </li>
             {% endfor %}

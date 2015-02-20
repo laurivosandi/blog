@@ -56,12 +56,19 @@ Features
 * Comprehensive build mode: detect broken links, cache embedded objects
 * Fritzing schematic rendering
 
+Known quirks
+============
+
+* SVG-s are not processed in serve mode, in build mode they actually get inlined
+
 Directory structure
 ===================
 
-css/ contains stylesheets
-js/ contains JavaScript
-templates/ contain .html files which are used as templates for posts/pages/etc
-posts/ contain .rst files which are transformed into dated urls 
-pages/ contain .rst files which maintain their filesystem hierarchy
+.. code::
+
+    css/ contains stylesheets
+    js/ contains JavaScript
+    templates/ contain .html files which are used as templates for posts/pages/etc
+    posts/ contain .rst files which are transformed into dated urls 
+    pages/ contain .rst files which maintain their filesystem hierarchy
 

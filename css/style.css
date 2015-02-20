@@ -1,6 +1,13 @@
 /**
  * General style
  */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
 svg.pygal-chart {
     margin: 1em auto;
 }
@@ -10,19 +17,20 @@ svg.pygal-chart .background {
     background-color: none;
 }
  
+html {
+    overflow: scroll;
+}
+ 
 .sponsors img {
-    
     display: block;
     margin: 10px auto 20px;
-    
 }
+
 /**
  * Search box is progressively added
  */
-
 #search {
     display: inline;
-
     background-position: 4px 0px;
     height: 32px;
     padding: 2px 2px 2px 38px;
@@ -30,27 +38,31 @@ svg.pygal-chart .background {
     border-radius: 99px;
     -moz-border-radius: 99px;
     -webkit-border-radius: 99px;
-    font-size: 5mm;
 }
  
 body,
 input,
 a,
-td {
-    font-size: 6mm;
+td,
+p {
+    font-size: 5mm;
+    line-height: 1.42857;
 }
 
+#navigation,
 body,
 input,
 a {
-    font-family: "Cabin Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Droid Sans", Helvetica, Arial, sans-serif;
 }
 
+#content .published {
+    float: right;
+    color: #aaa;
+}
 
-html,
-body {
-    margin: 0;
-    padding: 0;
+input {
+	box-sizing: border-box;
 }
 
 ul, ol {
@@ -98,19 +110,6 @@ header,
     padding: 0 5pt;
 }
 
-header {
-    margin: 2em auto 0;
-}
-
-header h {
-    margin-left: 20px;
-    font-size: 40px;
-    position: relative;
-    top: -16px;
-
-}
-
-
 /**
  * Links
  */
@@ -119,6 +118,11 @@ a {
     color: #800;
     text-decoration: none;
     border-bottom: 1px solid transparent;
+}
+
+a.broken {
+/*    text-decoration: line-through; */
+    cursor: not-allowed;
 }
 
 a:hover {
@@ -146,7 +150,7 @@ aside a:hover {
 
 #sidebar {
     float: right;
-    width: 300px;
+    width: 15em;
     display: none;
     margin: 0 0 1em 0;
     border-left: 1px dotted #ccc;
@@ -158,8 +162,8 @@ aside a:hover {
     margin: 0;
 }
 
-#location {
-    display: none;
+#sidebar section:last-child {
+    border-bottom: none;
 }
 
 .keywords {
@@ -195,16 +199,16 @@ aside a:hover {
 }
 
 
+
+
 /**
  * Navigation
  */
 
 #navigation {
-    margin: 2em 0 1em 0;
+    margin: 0 0 1em 0;
     background: #444;
-    font-family: "Cabin Condensed";
     padding: 0.5em 0;
-
 }
 
 #navigation div {
@@ -212,12 +216,18 @@ aside a:hover {
 }
 
 #navigation div a {
-    display: block;
-    font-size: 120%;
+    position: relative;
+    top: -2px;
+    display: inline;
     text-decoration: none;
-    color: #fff;
+    color: #ccc;
     border: none;
     margin-right: 1em;
+}
+
+#navigation div a img {
+    position: relative;
+    top: 4px;
 }
 
 #navigation div a:hover {
@@ -229,6 +239,7 @@ aside a:hover {
 
 #container {
     margin: 0 auto;
+    clear: both;
 }
 
 
@@ -238,29 +249,48 @@ aside a:hover {
     width: 147px;
 }
 
+@page {
+    margin: 25mm 25mm 25mm 25mm;
+}
+
 @media print {
-    nav {
+    nav,
+    #pagination,
+    #disqus_thread {
         display: none;
+
     }
     
     html,
     body,
     article {
         background: none;
-        margin: auto;
+        margin: 0;
         padding: 0;
     }
+
+    body,
+    input,
+    a,
+    td,
+    p {
+        font-size: 4mm;
+        line-height: 1.5;
+        font-family: 'Gentium';
+    }
+    
+    .document pre.code {
+        font-size: 3mm;
+    }
+    
+    
     
     .document {
         padding: auto;
         border: none;
-        font-size: 80%;
-        font-family: 'Gentium';
+
     }
     
-    #pagination {
-        display: none;
-    }
 }
 
 
@@ -275,9 +305,8 @@ aside a:hover {
         display: block;
     }
     
-    .document {
-        margin-right: 300px;
-        padding-right: 1em;
+    #content {
+        margin-right: 16em;
     }
     
     #content .tags,
@@ -287,7 +316,7 @@ aside a:hover {
 
     #search {
         float: right;
-        width: 16em;
+        width: 15em;
     }
 }
 

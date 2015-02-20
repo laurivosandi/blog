@@ -9,6 +9,9 @@
     <title>{{ post.title }}</title>
     <summary>{{ post.first_paragraph() }}</summary>
     <link href="{{ base }}{{ post.url }}"/>
+    <content type="html"><![CDATA[{{ post.render() }}]]></content>
+    {% for tag in post.tags %}
+    <category term="{{ tag }}"/>{% endfor %}
     <updated>{{ post.published.strftime("%Y-%m-%dT%H:%M:%SZ") }}</updated>
     {% for name, email in post.authors %}
     <author>

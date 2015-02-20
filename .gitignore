@@ -1,4 +1,6 @@
 *~
+*.autosave
+.*
 whitelist.urls
 blacklist.urls
 fonts/

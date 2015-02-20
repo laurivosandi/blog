@@ -6,7 +6,7 @@
 Segmentation faults with getenv under amd64
 ===========================================
 
-This is a follow up to `my previous <http://v6sa.wordpress.com/2010/05/19/estobuntu-lucid-lynx-ltsp/>`_  post.
+This is a follow up to `my previous </2010/05/estobuntu-lucid-lynx-ltsp.html>`_  post.
 
 So the thing is that we needed to adjust PCSC-Lite source tree so it would be
 possible to specify it's IPC socket path manually. It usually resides at

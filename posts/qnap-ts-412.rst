@@ -6,8 +6,6 @@
 QNAP TS-412 võrguketas
 ======================
 
-asdkfjfjlksajflksajflkdsajfdsajfsajdfljdsaflkjsaflkjsalkfjasfjksajfsajflkjsaf
-
 Käesolev artikkel räägib kuidas QNAP TS-412 võrgukettale
 paigaldada Debian tarkvarakogumik.
 
@@ -49,8 +47,8 @@ tuum (*kernel*) ning skriptid nende paigaldamiseks:
     cd /tmp
     busybox wget ftp://ftp.debian.org/debian/dists/stable/main/installer-armel/current/images/kirkwood/network-console/qnap/ts-41x/initrd.gz
     busybox wget ftp://ftp.debian.org/debian/dists/stable/main/installer-armel/current/images/kirkwood/network-console/qnap/ts-41x/kernel
-    busybox wget http://people.debian.org/~tbm/qnap/flash-debian
     busybox wget ftp://ftp.debian.org/debian/dists/stable/main/installer-armel/current/images/kirkwood/network-console/qnap/ts-41x/model
+    busybox wget ftp://ftp.debian.org/debian/dists/stable/main/installer-armel/current/images/kirkwood/network-console/qnap/ts-41x/flash-debian
     sh flash-debian
 
 Nüüd oota marurahulikult, et need skriptid võrguketta püsimälu uuendaks.
@@ -82,6 +80,14 @@ hoopis alumisel võrgupesal. Käesoleva katsetuse puhul oli näiteks nii:
 Viimane variant on see, et võrguketas läheb käima staatilise IP-aadressiga.
 Sel juhul peab käisitsi ühenduma 192.168.1.100 IP-aadressile ning
 sülearvuti vms masina kust ühendutakse tõstma samasse 192.168.1.0/24 alamvõrku.
+
+OpenWrt ruuteris olen ma  ajutiselt teinud järgnevalt,
+juhul kui ruuteri IP on miski muu:
+
+.. code:: bash
+
+    ifconfig br-lan:0 192.168.1.1
+
 Arvesta, et Debiani paigaldaja OpenSSH server genereerib igal käivitamisel
 uued võtmed mistõttu võib tulla ette, et peab *known_hosts* failist mõned 
 read eemaldada. Debiani paigaldaja parool on igal juhul *install*:

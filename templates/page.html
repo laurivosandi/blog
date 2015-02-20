@@ -9,7 +9,9 @@
 {% endblock %}
 
 {% block body %}
-    <article>
+
+
+        <h1>{{ post.title }}{% if post.published %}<span class="published">{{ post.published.strftime("%d. %b '%y") }}</span>{% endif %}</h1>
         {{ document }}
 
         {% block footer %}
@@ -27,5 +29,5 @@
             <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         {% endblock %}
         
-    </article>
+
 {% endblock %}

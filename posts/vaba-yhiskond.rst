@@ -77,10 +77,10 @@ Tänapäeval on kättesaadavad väga odavad krediitkaardisuurused arvutid,
 mis teeb võimalikuks väga odavalt õppida elektroonika, programmeerimise ning
 arvutite aluseid:
 
-* `Arduino </bootcamp/arduino/>`_
+* `Arduino </arduino/>`_
 * Raspberry Pi
 * `BeagleBoard ja BeagleBone <http://beagleboard.org/>`_
-* `Cubieboard, Cubieboard2 ja Cubietruck </blog/cubieboard2.html>`_
+* `Cubieboard, Cubieboard2 ja Cubietruck </search.html#cubie>`_
 * `LEGO Mindstorms <http://www.lego.com/en-us/mindstorms/>`_
 
 Praegu elame huvitaval ajastul kuna 3D printimine läheb aina odavamaks aga

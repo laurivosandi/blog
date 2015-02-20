@@ -6,7 +6,11 @@
 Ubuntu 10.04, LTSP ja ID-kaart
 ==============================
 
-Vahepeal on mitu uut Ubuntu väljalaset olnud ning viimased ID-kaardi terminal-serveri paketid Ubuntule sai treitud 8.04 jaoks. Seekord siis Estobuntu 10.09 ehk Ubuntu 10.04 jaoks, seni olengi ainult Ubuntu Long Term Support väljalasetele neid teinud ning tihedamini vist ei hakkagi punnitama.
+Vahepeal on mitu uut Ubuntu väljalaset olnud ning viimased ID-kaardi
+terminal-serveri paketid Ubuntule sai treitud 8.04 jaoks.
+Seekord siis Estobuntu 10.09 ehk Ubuntu 10.04 jaoks,
+seni olengi ainult Ubuntu Long Term Support väljalasetele neid teinud ning
+tihedamini vist ei hakkagi punnitama.
 
 Serveri tarkvara paigaldus
 --------------------------
@@ -43,6 +47,7 @@ Lisa Xsession skript mis näitab uut PCSC-lite sokkli asukohta:
 .. code:: bash
 
     echo "export PCSCLITE_CSOCK_NAME=$HOME/.pcscd.comm" > /etc/X11/Xsession.d/80-pcsclite
+
 
 Terminali tarkvara paigaldus
 ----------------------------

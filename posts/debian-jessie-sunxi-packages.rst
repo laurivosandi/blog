@@ -6,16 +6,18 @@
 Debian Jessie packages for Cubieboard and Cubietruck
 ====================================================
 
+.. important:: This howto is now more or less obsolete. Ubuntu 14.10 ships MATE packages, Chromium and it seems Ubuntu packages are much better optimized for Cubietruck.
+
 Introduction
 ------------
 
 Over past months I've been working hard to get the
 Debian running on my
-`Cubietruck <cubietruck-demo.html>`_ with all the bells and whistles.
+`Cubietruck </search.html#cubietruck>`_ with all the bells and whistles.
 I wanted to have usable Chromium, hardware accelerated video playback,
 MATE desktop and full Estonian ID-card support.
 
-.. figure:: http://nas.koodur.com/~lauri/public/Photos/Cubieboard/hypercubie.jpg
+.. figure:: img/hypercubie.jpg
     :width: 80%
 
     Cubietruck running Chromium, Estonian ID-card utility and playing back 720p video stream

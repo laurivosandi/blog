@@ -13,7 +13,7 @@
         <article class="report">
             <h1>Build report</h1>
             <ul>
-            {% for resource, message, severity %}
+            {% for resource, message, severity in messages %}
                 <li class="message {{ severity }}">
                     <a href="{{ resource.url }}">
                         {{ message }}

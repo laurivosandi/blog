@@ -1,9 +1,12 @@
 [submodule "pages/arduino"]
 	path = pages/arduino
-	url = git://github.com/v6sa/arduino-book.git
+	url = git@github.com:v6sa/arduino-book.git
 [submodule "pages/lan"]
 	path = pages/lan
-	url = git://github.com/v6sa/lan-book.git
+	url = git@github.com:v6sa/lan-book.git
 [submodule "pages/hdl"]
 	path = pages/hdl
-	url = git://github.com/v6sa/hdl.git
+	url = git@github.com:v6sa/hdl.git
+[submodule "pages/cfgmgmt"]
+	path = pages/cfgmgmt
+	url = git@github.com:v6sa/configuration-management-book.git

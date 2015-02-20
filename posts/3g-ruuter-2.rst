@@ -13,7 +13,7 @@ telefonilevi on ka nõrgavõitu ning peab pööningule ronima, võib osutuda
 mõistlikumaks ning püsivamaks alternatiiviks 3G modemi paigaldamine
 mõne marsruuteri külge.
 
-Soojenduseks võib lugeda `minu eelmist artiklit samal teemal <3g-ruuter.html>`_ 
+Soojenduseks võib lugeda `minu eelmist artiklit samal teemal </search.html#3G>`_ 
 kasutades enam mitte nii väga kättesaadavat Asus WL500G Premium marsruuterit.
 Nüüdsekd on omajagu aega mööda läinud ning pisut modernsemat võrguriistvara
 on liikvel. Käesolev näide tugineb TP-Link WDR4300 marsruuterile.

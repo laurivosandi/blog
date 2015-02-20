@@ -39,10 +39,9 @@ Sisemisele mälule on vaikimisi paigaldatud pooletoobine Android.
 Kui *microSD* mälukaart on paigaldatud püüab Cubieboard alglaadimist sooritada
 väliselt mälukaardilt.
 
-
 .. figure:: img/cubieboard2.jpg
 
-    Kodumaine pilt seadmest:
+    Kodumaine pilt seadmest
 
 
 Debiani paigaldus

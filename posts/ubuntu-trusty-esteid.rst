@@ -1,9 +1,12 @@
 .. title: ID-kaardi paketid Ubuntu 14.04, Linux Mint 17 ja Debian jaoks
 .. author: Lauri Võsandi <lauri.vosandi@gmail.com>
 .. date: 2014-04-18
+.. tags: tallinx
 
 ID-kaardi paketid Ubuntu 14.04, Linux Mint 17 ja Debian jaoks
 =============================================================
+
+.. important:: Käesolev juhend on aegunud. Ubuntu 14.04 ja Mint 17 jaoks soovitan 2014 septembri seisuga paigaldada RIA ametlikud tarkvarapaketid kuhu sisse sai ka minu Google Chrome/Chromium automaagia. Tähelepanu peaks pöörama sellele, et Chrome/Chromium 34 oli viimane versioon mis toetas ID-kaardiga allkirjastamist Firefox pistikprogrammi abil. RIA varamus on PPAPI liidesega pistikprogramm uuemate väljalasete jaoks, kuid see eeldab ka teenusepakkujate tuge mida ilmselt **2014 aasta sees ei tule**. LHV on lõpuks ka oma sertifikaadi korda teinud ning pole vaja keemiat teha et Chromium LHV-sse sisse logiks. Debiani pakettide jaoks võib minu varamut ikka proovida - wheezy amd64/i386 ning jessie armhf pakid peaks olema kasutuskõlblikud.
 
 Sissejuhatus
 ------------
@@ -146,5 +149,5 @@ Ubuntu 14.04 peal peaks kõik töötama õigesti Firefoxiga ning nagu öeldud
 täisväärtuslik Chromium/Chrome tuge võib oodata juunikuus.
 Vanemate Ubuntuliste jaoks soovitan tarbida ametlikke pakette.
 Kui midagi (muud) ei tööta siis võite ikka julgelt mulle e-kirjakese teele saata.
-`Annetused on ikka teretulnud </bootcamp/about.html>`_, ega open-source aktivistid ainult õhust ja armastusest ela ;)
+Annetused on ikka teretulnud, ega open-source aktivistid ainult õhust ja armastusest ela ;)
 

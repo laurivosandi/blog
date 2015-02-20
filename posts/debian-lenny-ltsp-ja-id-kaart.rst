@@ -1,16 +1,16 @@
 .. title: Debian Lenny, LTSP ja ID-kaart
 .. date: 2010-12-13 22:39:26
 .. tags: Debian, LTSP, SmartCard, PKCS#11, ID-card, ID-kaart
+.. flags: outdated
 
 Debian Lenny, LTSP ja ID-kaart
 ==============================
 
-.. image: http://www.debian.org/logos/openlogo-nd-100.png
-
 Serveri tarkvara paigaldus
 --------------------------
 
-Siin on siis väike juhend kuidas Debian Lenny'ga teha sama mida Estobuntu LTSP võimaldab. Pikalt see kord üksipulgi lahti ei seleta mis mida teeb nii et kui huvi on siis küsi e-posti vahendusel.
+Siin on siis väike juhend kuidas Debian Lenny'ga teha sama mida Estobuntu LTSP võimaldab.
+Pikalt see kord üksipulgi lahti ei seleta mis mida teeb nii et kui huvi on siis küsi e-posti vahendusel.
 
 Kõigepealt paigalda serveris ID-kaardi tarkvara:
 

@@ -36,3 +36,4 @@ I'd like to thank following great projects for making it happen:
 
 All content is released by me under `Creative Commons Attribution-ShareAlike 3.0
 <http://creativecommons.org/licenses/by/3.0/>`_ license unless otherwise noticed.
+
